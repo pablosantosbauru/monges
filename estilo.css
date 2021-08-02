@@ -8,26 +8,27 @@
 }
 .autoDesejo{
     margin: 0px;
-    padding-top: 5px;
+    padding-top: 10px;
+    font-size: 30px;
 
 }
 .autoDesejo2{
-    font-weight: ;
     color: white;
     margin: 10px;
     padding: 5px;
-    font-size: 20pt;
+    font-size: 30pt;
 
 }
 p{margin:0px;}
 body{
     font-family: arial;
+    font-size: 20pt;
 }
 .botao1{
     width: 100%;
     background-color: var(--cor2);
     border-width: 1;
-    font-size: 18pt;
+    font-size: 30pt;
     margin-bottom: 20px;
 }
 .botao2{
@@ -36,13 +37,13 @@ body{
     width: 75%;
     background-color: var(--cor2);
     border-width: 1;
-    font-size: 18pt;
+    font-size: 30pt;
     margin-bottom: 10px;
 }
 .caixaProd{
     margin: 5px;
-    width: 150px;
-    min-width: 150px;
+    width: 250px;
+    min-width: 250px;
     height: 100%;
     background-color: var(--cor0);
     padding: 5px;
@@ -62,15 +63,13 @@ body{
     margin-top: -10px;
 }
 .cardMudar{
-    font-size: 18pt;
-    height: 30px;
+    font-size: 30pt;
     width: 50px;
     
 }
 .cardApagar{
-    font-size: 18pt;
-    height: 30px;
-    width: 150px;
+    font-size: 30pt;
+    width: 200px;
 }
 .cardDesejo{
     background-color: white;
@@ -81,7 +80,7 @@ body{
 }
 .cardDesejoTitulo{
     font-weight: bolder;
-    font-size: 15pt;
+    font-size: 30px;
 }
 #card{
     text-align: center;
@@ -89,7 +88,7 @@ body{
     height: 100%;
     position: fixed;
     background-color: var(--cor5);
-    visibility: visible;
+    visibility: hidden;
 }
 .carrinhoMini{
     background-color: var(--cor5);
@@ -105,14 +104,14 @@ body{
     width: 90%;
     display: block;
     margin: 0 auto;
-    margin-bottom: -200px;
+    margin-bottom: -400px;
 }
 #destaqueBox{
     visibility: hidden;
 }
 .destaques{
     background-color: var(--cor1);
-    height: auto;
+    height: 30%;
     width: 100%;
     padding: 5px 0;
     display: flex;
@@ -129,8 +128,9 @@ body{
     margin-top: 10px;
     display: block;
     margin: 0 auto;
-    height: 100px;
-    width: 100px;
+    height: 160px;
+    width: 160px;
+    margin-bottom: 20px;
 }
 #listaCarrinho{
     margin-top: 10px;
@@ -165,17 +165,18 @@ main{
     text-align: center;
 }
 .tituloProd{
+    vertical-align: auto;
     margin: 0;
     text-align: center;
-    font-size: 12pt;
+    font-size: 27pt;
     width: auto;
-    height: 40px;
     font-weight: normal;
+    height: 138px;
 }
 .valorProd{
     text-align: center;
     margin: 0;
-    font-size: 18pt;
+    font-size: 32pt;
 }
 #voltar{
     display: block;
