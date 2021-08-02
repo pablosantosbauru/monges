@@ -35,5 +35,13 @@ produtos =[
             ["jack daniel's maçã", 149.9, "ON", "imagens/produtos/lata.jpg"],
             ["jack daniel's canela", 149.9, "ON", "imagens/produtos/lata.jpg"]
         ]
+    ],
+    [
+        ["vinhos",
+            ["pergola tinto suave 1l", 25, "ON", "imagens/produtos/lata.jpg"],
+            ["pergola branco suave 1l", 25, "ON", "imagens/produtos/lata.jpg"],
+            ["chapinha suave 750ml", 12, "ON", ""],
+            ["canção suave 750ml"]
+        ]
     ]
 ]
