@@ -7,7 +7,11 @@ let grupo = ""
 let imgAnuncio = document.getElementById("anuncio")
 let nAnuncio = 0
 let carrinho = document.getElementById('card')
-
+let listaCarrinho = document.getElementById('listaCarrinho')
+let listaProdutos = []
+let ped = 0
+let total = document.getElementById('totalCard')
+let valorTotal = 0
 let destaques = [produtos[1][0][2],
                 produtos[0][1][1],
                 produtos[0][2][1],
@@ -68,7 +72,9 @@ function mostrarProdutos(a){
 
             box.innerHTML +=
             `
-            <div class="caixaProd" id="${a}${i}${p}">
+            <div class="caixaProd" id="${a}${i}${p}"
+            onclick="comprarProd('${produtoNome}', ${produtoValor})">
+
                 <img class="imagemProd" src="${produtoImagem}">
                 <h3 class="tituloProd">${produtoNome.toUpperCase()}</h3>
                 <h4 class="valorProd">${converterReal(produtoValor)}</h4>
@@ -93,3 +99,79 @@ function abrirFecharCard(){
         carrinho.style.visibility = "visible"
     }
 }
+function comprarProd(nome,valor){
+    //alert(`o produto é "${nome}" e custa ${valor}`)
+    abrirFecharCard()
+    listaCarrinho.innerHTML +=
+    `
+    <div class="cardDesejo" id="pedido${ped}">
+        <p class="cardDesejoTitulo">${nome}</p>
+        <p class="hiddenP">${valor}</p>
+        
+        <label class="autoDesejo" id="lq${ped}">1</label>
+        <label>un</label>
+        <label class="autoDesejo" id="lv${ped}">${converterReal(valor)}</label>
+        <br>
+        <button id="ma0" class="cardMudar" onclick="maisQ(${valor},${ped})">+</button>
+        <button id="me0" class="cardMudar" onclick="menosQ(${valor},${ped})">-</button>
+        <button id="ap0" class="cardApagar" onclick="apagar(${ped})">APAGAR</button>
+    </div>
+    `
+    listaProdutos[ped] = [nome, valor, 1]
+    ped++
+    somarTotalValor()
+}
+function somarTotalValor(){
+    for(let i = 0; i < listaProdutos.length; i++){
+        if(listaProdutos[i][1] > 0)
+        valorTotal += listaProdutos[i][1]
+    }
+    total.innerHTML = converterReal(valorTotal)
+    valorTotal = 0
+}
+
+function maisQ(valor, nPedido){
+    let qt = document.getElementById(`lq${nPedido}`)
+    let vl = document.getElementById(`lv${nPedido}`)
+    listaProdutos[nPedido][2] += 1
+    listaProdutos[nPedido][1] += valor
+    qt.innerHTML = listaProdutos[nPedido][2]
+    vl.innerHTML = converterReal(listaProdutos[nPedido][1])
+    somarTotalValor()
+}
+function menosQ(valor, nPedido){
+    let qt = document.getElementById(`lq${nPedido}`)
+    let vl = document.getElementById(`lv${nPedido}`)
+    if(listaProdutos[nPedido][2]>1){
+        listaProdutos[nPedido][2] -= 1
+        listaProdutos[nPedido][1] -= valor
+    }else{
+        listaProdutos[nPedido][2] = 1
+    }
+
+    qt.innerHTML = listaProdutos[nPedido][2]
+    vl.innerHTML = converterReal(listaProdutos[nPedido][1])
+    somarTotalValor()
+}
+function apagar(ped){
+    pedidoApagar = document.getElementById(`pedido${ped}`)
+    pedidoApagar.parentNode.removeChild(pedidoApagar)
+    listaProdutos[ped] = [0,0,0]
+    total.innerHTML = "R$00,00"
+}
+
+/*
+<p class="autoDesejo">${converterReal(valor)}</p>
+
+<div class="cardDesejo" id="d0">
+    <p class="cardDesejoTitulo">PRODUTO X long neck </p>
+    <p class="hiddenP">2.5</p>
+    <p class="autoDesejo">R$2,50un</p>
+    <label class="autoDesejo" id="lq0">6un</label>
+    <label class="autoDesejo" id="lv0">R$15,00</label>
+    <br>
+    <button id="ma0" class="cardMudar">+</button>
+    <button id="me0" class="cardMudar">-</button>
+    <button id="ap0" class="cardApagar">APAGAR</button>
+</div>
+*/
