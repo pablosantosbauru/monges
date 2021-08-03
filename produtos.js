@@ -30,18 +30,56 @@ produtos =[
     [//destilados
         ["WHISKEYS",
             ["old star 1l", 12, "ON", "imagens/produtos/lata.jpg"],
-            ["jack daniel's tradicional", 139, "ON", "imagens/produtos/lata.jpg"],
-            ["jack daniel's mel", 139, "ON", "imagens/produtos/lata.jpg"],
-            ["jack daniel's maçã", 149.9, "ON", "imagens/produtos/lata.jpg"],
-            ["jack daniel's canela", 149.9, "ON", "imagens/produtos/lata.jpg"]
+            ["jack daniels tradicional", 139, "ON", "imagens/produtos/lata.jpg"],
+            ["jack daniels mel", 139, "ON", "imagens/produtos/lata.jpg"],
+            ["jack daniels maçã", 149.9, "ON", "imagens/produtos/lata.jpg"],
+            ["jack daniels canela", 149.9, "ON", "imagens/produtos/lata.jpg"]
         ]
     ],
-    [
-        ["vinhos",
+    [//VINHOS
+        ["PERGOLA",
             ["pergola tinto suave 1l", 25, "ON", "imagens/produtos/lata.jpg"],
-            ["pergola branco suave 1l", 25, "ON", "imagens/produtos/lata.jpg"],
-            ["chapinha suave 750ml", 12, "ON", ""],
-            ["canção suave 750ml"]
+            ["pergola branco suave 1l", 25, "ON", "imagens/produtos/lata.jpg"]
+        ],
+        ["CHAPINHA",
+            ["chapinha suave 750ml", 12, "ON", ""]
+        ],
+        ["CANÇÃO",
+            ["canção suave 750ml", 12, "on", ""]
+        ]
+    ],
+    [//REFRIGERANTES
+        ["VINHOS",
+            ["pergola tinto suave 1l", 25, "ON", "imagens/produtos/lata.jpg"]
+        ]
+    ],
+    [//SALGADINHOS
+        ["VINHOS",
+            ["pergola tinto suave 1l", 25, "ON", "imagens/produtos/lata.jpg"]
+        ]
+    ],
+    [//PETISCOS
+        ["VINHOS",
+            ["pergola tinto suave 1l", 25, "ON", "imagens/produtos/lata.jpg"]
+        ]
+    ],
+    [//CHURRASCO
+        ["PARA CHURRASCO",
+            ["SAL GROSSO 1KG", 3, "ON", "imagens/produtos/lata.jpg"],
+            ["PRATOS DESCARTAVEIS 20un", 5, "ON", "imagens/produtos/lata.jpg"],
+            ["PAPEL ALUMINIO", 8, "ON", ""],
+            ["COPOS 350ML", 10, "ON", ""]
+        ],
+        ["SANTA MASSA",
+            ["Pão de alho Tradicional", 12, "ON", "imagens/produtos/lata.jpg"],
+            ["pão de alho picante", 12, "ON", "imagens/produtos/lata.jpg"],
+            ["pao de cebola", 12, "ON", ""],
+            ["espeto de queijo", 12, "ON", ""]
+        ]
+    ],
+    [//OUTROS
+        ["VINHOS",
+            ["pergola tinto suave 1l", 25, "ON", "imagens/produtos/lata.jpg"]
         ]
     ]
 ]
