@@ -7,10 +7,13 @@ let grupo = ""
 let imgAnuncio = document.getElementById("anuncio")
 let nAnuncio = 0
 let carrinho = document.getElementById('card')
+let dados = document.getElementById('paginaConfirmaDados')
 let listaCarrinho = document.getElementById('listaCarrinho')
 let listaProdutos = []
 let ped = 0
+let totalPedidos = 0
 let total = document.getElementById('totalCard')
+let totalConfirma = document.getElementById('totalConfirma')
 let valorTotal = 0
 let destaques = [produtos[1][0][2],
                 produtos[0][1][1],
@@ -60,6 +63,7 @@ function mostrarProdutos(a){
         <h2 class="tituloTema">${produtos[a][i][0]}</h2>
         <div class="destaques" id="boxProd${a}${i}"></div>
         `
+        
     }
 
     for(let i = 0; i < produtos[a].length; i++){
@@ -80,7 +84,11 @@ function mostrarProdutos(a){
                 <h4 class="valorProd">${converterReal(produtoValor)}</h4>
             </div>
             `
+            if(produtos[a][i].length < 4){
+                document.getElementById(`boxProd${a}${i}`).style.justifyContent= "space-around"
+            }
         }
+        
     }
 }
 function slide(){
@@ -97,6 +105,13 @@ function abrirFecharCard(){
         carrinho.style.visibility = "hidden"
     }else{
         carrinho.style.visibility = "visible"
+    }
+}
+function abrirFecharConfirmaDados(){
+    if(dados.style.visibility == "visible"){
+        dados.style.visibility = "hidden"
+    }else{
+        dados.style.visibility = "visible"
     }
 }
 function comprarProd(nome,valor){
@@ -121,6 +136,7 @@ function comprarProd(nome,valor){
     `
     listaProdutos[ped] = [nome, valor, 1]
     ped++
+    totalPedidos++
     somarTotalValor()
 }
 function somarTotalValor(){
@@ -129,6 +145,14 @@ function somarTotalValor(){
         valorTotal += listaProdutos[i][1]
     }
     total.innerHTML = converterReal(valorTotal)
+    valorTotal = 0
+}
+function somarTotalValor2(){
+    for(let i = 0; i < listaProdutos.length; i++){
+        if(listaProdutos[i][1] > 0)
+        valorTotal += listaProdutos[i][1]
+    }
+    totalConfirma.innerHTML = converterReal(valorTotal)
     valorTotal = 0
 }
 function maisQ(valor, nPedido){
@@ -176,8 +200,16 @@ function apagar(ped){
     pedidoApagar = document.getElementById(`pedido${ped}`)
     pedidoApagar.parentNode.removeChild(pedidoApagar)
     listaProdutos[ped] = [0,0,0]
+    totalPedidos--
     somarTotalValor()
 }
+function confirmaDados(){
+    if(totalPedidos>0){
+        abrirFecharConfirmaDados()
+        somarTotalValor2()
+    }
+}
+
 
 /*
 <p class="autoDesejo">${converterReal(valor)}</p>
