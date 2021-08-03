@@ -1,10 +1,36 @@
 :root{
-    --cor0: #ffffff;
-    --cor1: #FFC800;
-    --cor2: #E6B400;
-    --cor3: #BF9600;
-    --cor4: #806400;
-    --cor5: #403200;
+    --cor0: #FFFFFF;
+    --cor1: #c9c9c9;
+    --cor2: #b9b9b9;
+    --cor3: #888888;
+    --cor4: #5a5a5a;
+    --cor5: #272727;
+    --cor6: #b3b3b3;
+    --cor7: #d6d6d6;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--cor6);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--cor7);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--cor2);
+  }
+
+html{
+    scroll-behavior: smooth;
 }
 .autoDesejo{
     margin: 0px;
@@ -23,13 +49,16 @@ p{margin:0px;}
 body{
     font-family: arial;
     font-size: 20pt;
+    background-color: var(--cor0);
 }
 .botao1{
     width: 100%;
     background-color: var(--cor2);
     border-width: 1;
     font-size: 30pt;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    border: black 0px;
+    height: 80px;
 }
 .botao2{
     display: block;
@@ -38,7 +67,9 @@ body{
     background-color: var(--cor2);
     border-width: 1;
     font-size: 30pt;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    border: black 0px;
+    height: 80px;
 }
 .caixaProd{
     margin: 5px;
@@ -56,7 +87,7 @@ body{
     margin: 0 auto;
 }
 .cabecalhoSite{
-    background-color: VAR(--cor1);
+    background-color: #FFC800;
     padding: 10px 5px;
     position: fixed;
     padding: px;
@@ -67,12 +98,17 @@ body{
     width: 50px;
     
 }
+.cardMudarMaior{
+    font-size: 30pt;
+    width: 90px;
+    
+}
 .cardApagar{
     font-size: 30pt;
     width: 200px;
 }
 .cardDesejo{
-    background-color: white;
+    background-color: #ffffff;
     width: 90%;
     margin: 10px auto;
     text-align: center;
@@ -110,7 +146,8 @@ body{
     visibility: hidden;
 }
 .destaques{
-    background-color: var(--cor1);
+    box-shadow: 5px -10px 10px rgba(0,0,0,.5);
+    background-color: var(--cor3);
     height: 30%;
     width: 100%;
     padding: 5px 0;
@@ -138,7 +175,7 @@ body{
     margin: 0 auto;
     width: 77%;
     height: 45%;
-    background-color: yellow;
+    background-color: var(--cor2);
     overflow-y: hidden;
     overflow-y: scroll;
     overflow-x: inherit;
@@ -151,7 +188,7 @@ main{
 }
 .paginaProdutos{
     margin-top: 1%;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--cor0);
     position: fixed;
     width: 87%;
     height: 75%;
