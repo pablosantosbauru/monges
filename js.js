@@ -112,6 +112,8 @@ function comprarProd(nome,valor){
         <label>un</label>
         <label class="autoDesejo" id="lv${ped}">${converterReal(valor)}</label>
         <br>
+        <button id="ma0" class="cardMudarMaior" onclick="mais6(${valor},${ped})">+6</button>
+        <button id="ma0" class="cardMudarMaior" onclick="mais12(${valor},${ped})">+12</button>
         <button id="ma0" class="cardMudar" onclick="maisQ(${valor},${ped})">+</button>
         <button id="me0" class="cardMudar" onclick="menosQ(${valor},${ped})">-</button>
         <button id="ap0" class="cardApagar" onclick="apagar(${ped})">APAGAR</button>
@@ -129,12 +131,29 @@ function somarTotalValor(){
     total.innerHTML = converterReal(valorTotal)
     valorTotal = 0
 }
-
 function maisQ(valor, nPedido){
     let qt = document.getElementById(`lq${nPedido}`)
     let vl = document.getElementById(`lv${nPedido}`)
     listaProdutos[nPedido][2] += 1
     listaProdutos[nPedido][1] += valor
+    qt.innerHTML = listaProdutos[nPedido][2]
+    vl.innerHTML = converterReal(listaProdutos[nPedido][1])
+    somarTotalValor()
+}
+function mais6(valor, nPedido){
+    let qt = document.getElementById(`lq${nPedido}`)
+    let vl = document.getElementById(`lv${nPedido}`)
+    listaProdutos[nPedido][2] += 6
+    listaProdutos[nPedido][1] += valor*6
+    qt.innerHTML = listaProdutos[nPedido][2]
+    vl.innerHTML = converterReal(listaProdutos[nPedido][1])
+    somarTotalValor()
+}
+function mais12(valor, nPedido){
+    let qt = document.getElementById(`lq${nPedido}`)
+    let vl = document.getElementById(`lv${nPedido}`)
+    listaProdutos[nPedido][2] += 12
+    listaProdutos[nPedido][1] += valor*12
     qt.innerHTML = listaProdutos[nPedido][2]
     vl.innerHTML = converterReal(listaProdutos[nPedido][1])
     somarTotalValor()
@@ -157,7 +176,7 @@ function apagar(ped){
     pedidoApagar = document.getElementById(`pedido${ped}`)
     pedidoApagar.parentNode.removeChild(pedidoApagar)
     listaProdutos[ped] = [0,0,0]
-    total.innerHTML = "R$00,00"
+    somarTotalValor()
 }
 
 /*
