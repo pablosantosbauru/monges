@@ -24,7 +24,7 @@
                 <div>
                     <label class="autoDesejo2">TOTAL</label>
                     <label class="autoDesejo2" id="totalCard">R$00,00</label><BR>
-                    <button class="botao2">PROSSEGUIR</button>
+                    <button class="botao2" onclick="confirmaDados()">PROSSEGUIR</button>
                     <button class="botao2" onclick="abrirFecharCard()">VOLTAR AS COMPRAS</button>
                 </div>
             </section>
@@ -32,6 +32,33 @@
             <section>
                 <div class="carrinhoMini" onclick="abrirFecharCard()" >
                     <img src="carrinho.png" class="imgCarrinho">
+                </div>
+            </section>
+            <section>
+                <div id=paginaConfirmaDados>
+                    <h2 class="tituloTema2">INFORME OS DADOS PARA ENTRGA</h2>
+                    <div id="conteudoConfirmaDados">
+                        
+                                <label class="confirmaLabels">Nome:</label>
+                      
+                                <input class="confirmaInputs" type="text" placeholder="INSIRA SEU NOME">
+                            <br>
+                                <label class="confirmaLabels">Endereço</label>
+                     
+                                <input class="confirmaInputs" type="text" placeholder="rua, numero, bairro e complemento.">
+                           <br>
+                                <label class="confirmaLabels">Observação:</label>
+                        
+                                <textarea  class="confirmaInputsObs" type="" placeholder="Observação sobre seu pedido."></textarea>
+                           
+                            <br>
+                            <div>
+                            <label class="tituloTema2">TOTAL DA SUA COMPRA É DE:</label>
+                            <label class="tituloTema2" id="totalConfirma">R$00,00</label><BR>
+                            </div>
+                        <button class="botao2" onclick="finalizarPedido()">FINALIZAR PEDIDO</button>
+                        <button class="botao2" onclick="abrirFecharConfirmaDados()">VOLTAR AS COMPRAS</button>
+                    </div>
                 </div>
             </section>
             
