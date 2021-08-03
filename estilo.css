@@ -73,8 +73,8 @@ body{
 }
 .caixaProd{
     margin: 5px;
-    width: 250px;
-    min-width: 250px;
+    width: 260px;
+    min-width: 260px;
     height: 100%;
     background-color: var(--cor0);
     padding: 5px;
@@ -92,6 +92,8 @@ body{
     position: fixed;
     padding: px;
     margin-top: -10px;
+    width: 100%;
+    height: 23%;
 }
 .cardMudar{
     font-size: 30pt;
@@ -120,6 +122,7 @@ body{
 }
 #card{
     text-align: center;
+    margin-top: -10px;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -135,6 +138,36 @@ body{
     margin-left: 89%;
     border-radius: 8px 0px 0px 8px;
 
+}
+#conteudoConfirmaDados div{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.confirmaConteudo{
+    text-align: center;
+}
+.confirmaLabels{
+
+    display: block;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+.confirmaInputs{
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    width: 80%;
+    font-size: 20pt;
+}
+.confirmaInputsObs{
+    display: block;
+    margin: 0 auto;
+    height: 150px;
+    width: 80%;
+    text-align: initial;
+    font-size: 20pt;
 }
 .destaquesAnuncio{
     width: 90%;
@@ -186,29 +219,46 @@ main{
 .principal{
     width: 87%;
 }
+#paginaConfirmaDados{
+    position: fixed;
+    background-color: var(--cor5);
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+   
+}
 .paginaProdutos{
-    margin-top: 1%;
+    margin-top: -1%;
     background-color: var(--cor0);
     position: fixed;
     width: 87%;
-    height: 75%;
+    height: 73%;
     visibility: hidden;
-    margin-top: -10px;
     overflow-y: hidden;
     overflow-y: scroll;
     
 }
+textarea{
+    resize:none;
+}
 .tituloTema{
     text-align: center;
+}
+.tituloTema2{
+    font-size: 30pt;
+    color: rgb(182, 182, 182);
+    text-align: center;
+    width: 100%;
 }
 .tituloProd{
     vertical-align: auto;
     margin: 0;
     text-align: center;
-    font-size: 27pt;
+    font-size: 25pt;
     width: auto;
     font-weight: normal;
     height: 138px;
+    word-wrap: break-word;
 }
 .valorProd{
     text-align: center;
