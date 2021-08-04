@@ -8,7 +8,7 @@
         <title>MONGES BIER DELIVERY</title>
     </head>
     <body>
-        <header class="cabecalhoSite">                                                                                                                                                                                
+        <header class="cabecalhoSite">      
             <img src="capa.png" class="capaMonges">
         </header>
         <main>
@@ -34,6 +34,7 @@
                     <img src="carrinho.png" class="imgCarrinho">
                 </div>
             </section>
+            <!--PAGINA DE CONFIRMAÇÃO DE DADOS-->
             <section>
                 <div id=paginaConfirmaDados>
                     <h2 class="tituloTema2">INFORME OS DADOS PARA ENTRGA</h2>
@@ -60,6 +61,13 @@
                         <button class="botao2" onclick="abrirFecharConfirmaDados()">VOLTAR AS COMPRAS</button>
                     </div>
                 </div>
+            </section>
+            <!--CONFIRMAÇÃO CASCO-->
+            <section id="paginaConfirmaCascos">
+                <h2>ATENÇÃO, ESTE PRODUTO NECESSITA DE CASCO!</h2>
+                <h2>VOCÊ POSSUI OS CASCOS?</h2>
+                <button class="botao1" onclick="perguntaCasco(1)">SIM, POSSUO OS CASCOS.</button>
+                <button class="botao1" onclick="perguntaCasco(0)">NÃO POSSUO OS CASCOS.</button>
             </section>
             
 
