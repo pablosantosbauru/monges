@@ -10,9 +10,9 @@ produtos =[
 
         ["ANTARCTICA",
             ["ANTARCTICA BOA 350ML", 2.5, "ON", "imagens/produtos/boa lata.jpg"],
-            ["ANTARCTICA BOA 300ML", 1.79, "ON", "imagens/produtos/lata.jpg"],
-            ["ANTARCTICA BOA 600ML", 2.5, "ON", "imagens/produtos/lata.jpg"],
-            ["ANTARCTICA BOA 1LITRO", 2.5, "ON", "imagens/produtos/lata.jpg"]
+            ["ANTARCTICA BOA 300ML", 1.79, "ON", "imagens/produtos/lata.jpg", 1],
+            ["ANTARCTICA BOA 600ML", 2.5, "ON", "imagens/produtos/lata.jpg", 1],
+            ["ANTARCTICA BOA 1LITRO", 2.5, "ON", "imagens/produtos/lata.jpg", 1]
         ],
         ["SUBZERO",
             ["SUBZERO 350ML", 2.4,"ON","imagens/produtos/subzero lata.jpg"]
@@ -49,18 +49,18 @@ produtos =[
         ]
     ],
     [//REFRIGERANTES
-        ["VINHOS",
-            ["pergola tinto suave 1l", 25, "ON", "imagens/produtos/lata.jpg"]
+        ["coca cola",
+            ["coca cola 2L", 7.5, "ON", "imagens/produtos/lata.jpg"]
         ]
     ],
     [//SALGADINHOS
-        ["VINHOS",
-            ["pergola tinto suave 1l", 25, "ON", "imagens/produtos/lata.jpg"]
+        ["pringles",
+            ["pringles tradicional", 12, "ON", "imagens/produtos/lata.jpg"]
         ]
     ],
     [//PETISCOS
-        ["VINHOS",
-            ["pergola tinto suave 1l", 25, "ON", "imagens/produtos/lata.jpg"]
+        ["salame",
+            ["salame pamplona", 16, "ON", "imagens/produtos/lata.jpg"]
         ]
     ],
     [//CHURRASCO
@@ -77,9 +77,14 @@ produtos =[
             ["espeto de queijo", 12, "ON", ""]
         ]
     ],
+    [//tabacaria
+        ["ziggy",
+            ["ziggy melancia", 9.75, "ON", "imagens/produtos/lata.jpg"]
+        ]
+    ],
     [//OUTROS
-        ["VINHOS",
-            ["pergola tinto suave 1l", 25, "ON", "imagens/produtos/lata.jpg"]
+        ["copos",
+            ["copo brahma", 25, "ON", "imagens/produtos/lata.jpg"]
         ]
     ]
 ]
