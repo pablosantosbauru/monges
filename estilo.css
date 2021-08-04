@@ -21,12 +21,12 @@
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--cor7);
+    background: var(--cor4);
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--cor2);
+    background: var(--cor5);
   }
 
 html{
@@ -52,11 +52,12 @@ body{
     background-color: var(--cor0);
 }
 .botao1{
-    width: 100%;
-    background-color: var(--cor2);
+    width: 87%;
+    background-color: var(--cor1);
     border-width: 1;
     font-size: 30pt;
-    margin-bottom: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     border: black 0px;
     height: 80px;
 }
@@ -82,32 +83,28 @@ body{
     
 }
 .capaMonges{
-    width: 90%;
+    height: 90%;
+    max-width: 95%;
     display: block;
-    margin: 0 auto;
-}
-.cabecalhoSite{
-    background-color: #FFC800;
-    padding: 10px 5px;
-    position: fixed;
-    padding: px;
-    margin-top: -10px;
-    width: 100%;
-    height: 23%;
+    margin: auto auto;
+    margin-top: 10px;
 }
 .cardMudar{
     font-size: 30pt;
-    width: 50px;
+    width: 80px;
+    height: 80px;
     
 }
 .cardMudarMaior{
     font-size: 30pt;
     width: 90px;
+    height: 80px;
     
 }
 .cardApagar{
     font-size: 30pt;
     width: 200px;
+    height: 80px;
 }
 .cardDesejo{
     background-color: #ffffff;
@@ -116,25 +113,22 @@ body{
     text-align: center;
     padding: 5px;
 }
+.cardDesejo button{
+    background-color: var(--cor3);
+    border: 0px solid black;
+    color: black;
+}
 .cardDesejoTitulo{
     font-weight: bolder;
     font-size: 30px;
 }
-#card{
-    text-align: center;
-    margin-top: -10px;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-color: var(--cor5);
-    visibility: hidden;
-}
+
 .carrinhoMini{
     background-color: var(--cor5);
     width: 10%;
     padding: 10px 0;
     position: fixed;
-    margin-top: 50px;
+    margin-top: 300px;
     margin-left: 89%;
     border-radius: 8px 0px 0px 8px;
 
@@ -170,19 +164,20 @@ body{
     font-size: 20pt;
 }
 .destaquesAnuncio{
-    width: 90%;
+    width: 80%;
     display: block;
-    margin: 0 auto;
+    padding-top: 330px;
     margin-bottom: -400px;
+    margin-left: 4%;
 }
 #destaqueBox{
     visibility: hidden;
 }
 .destaques{
-    box-shadow: 5px -10px 10px rgba(0,0,0,.5);
-    background-color: var(--cor3);
+    /*box-shadow: 5px -10px 10px rgba(0,0,0,.5);*/
+    background-color: var(--cor2);
     height: 30%;
-    width: 100%;
+    width: 87%;
     padding: 5px 0;
     display: flex;
     flex-direction: row;
@@ -203,7 +198,7 @@ body{
     margin-bottom: 20px;
 }
 #listaCarrinho{
-    margin-top: 10px;
+    margin-top: 50px;
     display: block;
     margin: 0 auto;
     width: 77%;
@@ -213,26 +208,55 @@ body{
     overflow-y: scroll;
     overflow-x: inherit;
 }
-main{
-    padding-top: 32%;
-}
 .principal{
-    width: 87%;
+    width: 100%;
+}
+
+.cabecalhoSite{
+    background-color: #FFC800;
+    position: fixed;
+    width: 100%;
+    margin-top: -33px;
+    height: 333px;
 }
 #paginaConfirmaDados{
+    margin-top: 300px;
     position: fixed;
     background-color: var(--cor5);
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 333px);
     visibility: hidden;
    
 }
-.paginaProdutos{
-    margin-top: -1%;
-    background-color: var(--cor0);
+#paginaConfirmaCascos{
+    margin-top: 300px;
+    display: block;
     position: fixed;
-    width: 87%;
-    height: 73%;
+    height: calc(100vh - 333px);
+    width: 94%;
+    background-color: var(--cor4);
+    padding: 3%;
+    text-align: center;
+    visibility: hidden;
+}
+#paginaConfirmaCascos h2{
+    color: white;
+}
+#card{
+    text-align: center;
+    margin-top: 300px;
+    width: 100%;
+    height: calc(100vh - 333px);
+    position: fixed;
+    background-color: var(--cor5);
+    visibility: hidden;
+}
+.paginaProdutos{
+    margin-top: 300px;
+    background-color: var(--cor2);
+    position: fixed;
+    width: 100%;
+    height: calc(100vh - 333px);
     visibility: hidden;
     overflow-y: hidden;
     overflow-y: scroll;
@@ -242,6 +266,7 @@ textarea{
     resize:none;
 }
 .tituloTema{
+    width: 87%;
     text-align: center;
 }
 .tituloTema2{
@@ -267,7 +292,6 @@ textarea{
 }
 #voltar{
     display: block;
-    margin: 10px auto;
 }
 .hiddenP{
     visibility: hidden;
