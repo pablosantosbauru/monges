@@ -8,6 +8,7 @@ let imgAnuncio = document.getElementById("anuncio")
 let nAnuncio = 0
 let carrinho = document.getElementById('card')
 let dados = document.getElementById('paginaConfirmaDados')
+let casco = document.getElementById('paginaConfirmaCascos')
 let listaCarrinho = document.getElementById('listaCarrinho')
 let listaProdutos = []
 let ped = 0
@@ -15,6 +16,9 @@ let totalPedidos = 0
 let total = document.getElementById('totalCard')
 let totalConfirma = document.getElementById('totalConfirma')
 let valorTotal = 0
+let nomeC = ""
+let valorC = ""
+
 let destaques = [produtos[1][0][2],
                 produtos[0][1][1],
                 produtos[0][2][1],
@@ -73,11 +77,14 @@ function mostrarProdutos(a){
             let produtoNome = produtos[a][i][p][0]
             let produtoValor = produtos[a][i][p][1]
             let produtoImagem = produtos[a][i][p][3]
-
+            let produtoCasco = produtos[a][i][p][4]
+            if(produtos[a][i][p][4] == true){
+                produtoCasco = 1
+            }
             box.innerHTML +=
             `
             <div class="caixaProd" id="${a}${i}${p}"
-            onclick="comprarProd('${produtoNome}', ${produtoValor})">
+            onclick="comprarProd('${produtoNome}', ${produtoValor}, ${produtoCasco})">
 
                 <img class="imagemProd" src="${produtoImagem}">
                 <h3 class="tituloProd">${produtoNome.toUpperCase()}</h3>
@@ -87,6 +94,7 @@ function mostrarProdutos(a){
             if(produtos[a][i].length < 4){
                 document.getElementById(`boxProd${a}${i}`).style.justifyContent= "space-around"
             }
+            produtoCasco = 0
         }
         
     }
@@ -114,8 +122,7 @@ function abrirFecharConfirmaDados(){
         dados.style.visibility = "visible"
     }
 }
-function comprarProd(nome,valor){
-    //alert(`o produto é "${nome}" e custa ${valor}`)
+function comprarOk(nome, valor){
     abrirFecharCard()
     listaCarrinho.innerHTML +=
     `
@@ -138,6 +145,23 @@ function comprarProd(nome,valor){
     ped++
     totalPedidos++
     somarTotalValor()
+}
+function comprarProd(nome,valor,precisaCasco){
+    //alert(`o produto é "${nome}" e custa ${valor}`)
+    if(precisaCasco == 1){
+        casco.style.visibility = "visible"
+        nomeC = nome
+        valorC = valor
+    }else{
+        comprarOk(nome,valor)
+    }
+
+}
+function perguntaCasco(resp){
+    if(resp == 1){
+        comprarOk(nomeC, valorC)
+    }
+    casco.style.visibility = "hidden"
 }
 function somarTotalValor(){
     for(let i = 0; i < listaProdutos.length; i++){
